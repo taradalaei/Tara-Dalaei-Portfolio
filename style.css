@@ -436,3 +436,19 @@ footer {
 footer p {
   text-align: center;
 }
+
+.swirl-gradient {
+  /* keep this EXACT and static */
+  background:
+    radial-gradient(circle at 30% 17%, rgb(8, 129, 192) 4%, transparent 25%),
+    radial-gradient(circle at 100% 0%, gray 0%, transparent 8%),
+    radial-gradient(circle at 20% 2%, rgb(8, 192, 162) 0%, transparent 10%),
+    radial-gradient(circle at 75% 70%, rgb(8, 129, 192) 5%, transparent 22%),
+    radial-gradient(ellipse at 100% 40%, gray 0%, transparent 20%),
+    radial-gradient(ellipse at 10% 45%, rgb(8, 192, 162) 0%, transparent 20%),
+    radial-gradient(circle at 20% 95%, rgb(8, 129, 192) 5%, transparent 22%);
+  background-blend-mode: overlay;
+
+  /* give the var a deterministic default present on SSR, too */
+  --gradient-pos: 0%;
+}
